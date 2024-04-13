@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sriram Gurazada's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work-experience">Work Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="header">
+        <div class="profile">
+            <img src="sriram.jpg" alt="Sriram Gurazada">
+            <div>
+                <h1>Sriram Gurazada</h1>
+                <p>Software Engineer - Specializing in SSO and Automation</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+
+            <div>
+                <p>Enthusiast, highly-motivated Computer Science Grad with proven leadership skills and am eager to take up new challenges with dedication, discipline and determination. At the end of the day I aspire to be the happiest, the most successful and best version of myself.</p>
+            </div>
+
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python, Django</li>
+            <li>JavaScript, NodeJS</li>
+            <li>HTML, CSS</li>
+            <li>Azure, GCP</li>
+            <li>Game Development</li>
+            <li>AI & Machine Learning</li>
+        </ul>
+    </section>
+<!-- ... (Your existing HTML content) ... -->
+
+<section id="work-experience">
+    <h2>Work Experience</h2>
+    <!-- Work Experience Items Here -->
+    <div class="work-experience-item">
+        <h3>Security Analyst, Student Worker</h3>
+        <p>Facility and planning management at USC, Aug 2023 - Present</p>
+        <!-- ... Other details if needed ... -->
+    </div>
+
+    <div class="work-experience-item">
+        <h3>Software Engineer at United Health Group</h3>
+        <p>Hyderabad, May 2021 - Apr 2023</p>
+        <button onclick="openModal('softwareEngineerModal')">Read More</button>
+    </div>
+
+    <div class="work-experience-item">
+        <h3>Student Teaching Assistant</h3>
+        <p>KL University, Design and analysis of Algorithms course, Jun 2019 - May 2020</p>
+        <!-- ... Other details if needed ... -->
+    </div>
+
+    <div class="work-experience-item">
+        <h3>Founder - Cloud Computing Club, Megha</h3>
+        <p>KL University, 2019-2021</p>
+        <!-- ... Other details if needed ... -->
+    </div>
+
+
+</section>
+
+<!-- Modal for Software Engineer Experience -->
+<div id="softwareEngineerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('softwareEngineerModal')">&times;</span>
+        <h3>Software Engineer at United Health Group</h3>
+        <ul>
+            <li>Involved in designing a Single Sign On (SSO) solution for different applications from various teams in the Organization. Responsible for handling multiple teams in parallel and prioritizing requirements/issues.</li>
+            <li>Co-ordinate day-to-day communication with application teams and guide them through the Single Sign On configuration throughout the project.</li>
+            <li>Tracking operational issues and post-production issues along with ensuring timely closure.</li>
+            <li>Monitoring the infrastructure for any performance issues using Splunk, Grafana and SiteScope and taking corrective measures during on-call support.</li>
+            <li>Developing and maintaining quality documentation related to Integrations, Automation scripts along with their deployments and operations.</li>
+            <li>Developed a GraphQL API in Django for accurate fetching the data from SharePoint APIs and displaying the data in a user-friendly web page with pre-filled queries for easy accessibility. This acts as the single point of source for IAM infrastructure.</li>
+            <li>Working on implementation of GraphQL APIs with Unified Graphical dashboard which displays server information and how the servers are connected to each other.</li>
+            <li>Working on Service Accounts password management throughout the year, in which we renew the passwords and update them in CyberArk, Ping consoles and other necessary scripts.</li>
+            <li>Working on SAML Automation—SAML Ping Federate configuration management – Developing front end and logic for SAML automation process using Django.</li>
+            <li>Taking up weekend shifts periodically to support any issues that occur on weekends.</li>
+            <li>Training and giving KT to new team members on the IAM process/configuration flow and Operational duties.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- JavaScript for Modal -->
+<script>
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target.className === 'modal') {
+            event.target.style.display = 'none';
+        }
+    }
+</script>
+
+<!-- ... (The rest of your HTML content) ... -->
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="tab">
+        <button class="tablinks" onclick="openCategory(event, 'FullStack')" id="defaultOpen">Full Stack</button>
+        <button class="tablinks" onclick="openCategory(event, 'Automation')">Automation</button>
+        <button class="tablinks" onclick="openCategory(event, 'MachineLearning')">Machine Learning</button>
+        <button class="tablinks" onclick="openCategory(event, 'GameDevelopment')">Game Development</button>
+        <button class="tablinks" onclick="openCategory(event, 'Other')">Other</button>
+    </div>
+
+    <div id="FullStack" class="tabcontent">
+        <div class="project">
+            <h3>Event Management Booking System</h3>
+            <p>Utilized React, Node.js, GraphQL, and MongoDB to create an integrated platform for event management and booking, enhancing user experience with real-time updates and comprehensive event control.</p>
+        </div>
+        <div class="project">
+            <h3>Graphical Inventory Dashboard</h3>
+            <p>Developed a user-friendly Node.js dashboard for server monitoring, integrating a high-performance GraphQL API with Sharepoint for efficient data display and managing server restarts, which saved 1150 hours annually.</p>
+        </div>
+        <div class="project">
+            <h3>SAML Configuration Automation</h3>
+            <p>Orchestrated the seamless setup of application infrastructure using PingFederate, automating the configuration process. A user-friendly front-end portal was engineered for efficient creation of connections and deployment, improving productivity and security protocol adherence.</p>
+        </div>
+    </div>
+    
+
+    <div id="Automation" class="tabcontent">
+        <!-- Add Automation projects here -->
+    </div>
+
+    <div id="MachineLearning" class="tabcontent">
+        <!-- Add Machine Learning projects here -->
+    </div>
+
+    <div id="GameDevelopment" class="tabcontent">
+        <!-- Add Game Development projects here -->
+    </div>
+
+    <div id="Other" class="tabcontent">
+        <!-- Add Other projects here -->
+    </div>
+</section>
+
+<script>
+    // Function to open a category tab
+    function openCategory(evt, categoryName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(categoryName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Trigger a click on the "defaultOpen" element when the page loads
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("defaultOpen").click();
+    });
+</script>
+    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: gurazada@usc.edu</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/gschandra123">gschandra123</a></p>
+    </section>
+
+    <footer>
+        <p>Copyright © 2023 Sriram Gurazada</p>
+    </footer>
+</body>
+</html>
